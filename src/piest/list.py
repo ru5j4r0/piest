@@ -6,8 +6,11 @@ def head_rest(l):
 def flat(l):
     return list(chain.from_iterable(l))
 
-def split_map_flat(l):
-    return flat(map(str.split, l))
+def map_split(l):
+    return map(str.split, l)
+
+def flat_map_split(l):
+    return flat(map_split(l))
 
 def divide(l, v):
     return (l[:(i := l.index(v))], l[i+1:]) if v in l else (l, None)
