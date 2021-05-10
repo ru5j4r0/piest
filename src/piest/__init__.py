@@ -1,3 +1,6 @@
-from piest.main import *
-from piest import meta
+from piest import \
+    list, \
+    dict, \
+    file, \
+    meta
 
