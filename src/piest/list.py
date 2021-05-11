@@ -6,10 +6,10 @@ def head_rest(l):
 def flat(l):
     return list(chain.from_iterable(l))
 
-def map_split(l):
+def splits(l):
     return map(str.split, l)
 
-def flat_map_split(l):
+def flat_splits(l):
     return flat(map_split(l))
 
 def divide(l, v):
