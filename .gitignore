@@ -1,6 +1,6 @@
 __pycache__/
 piest.egg-info/
-.venv
+.venv/
 build/
 dist/
-
+.idea/
