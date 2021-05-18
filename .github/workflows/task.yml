@@ -1,0 +1,10 @@
+name: docs
+on: workflow_dispatch
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          . .venv/bin/activate
+          sphinx-apidoc -f -o docs/source/piest src/piest
+          make html -C docs
