@@ -1,12 +1,12 @@
 from itertools import chain
 
 
-def head_rest(li):
-    return (li[0], li[1:]) if len(li) != 0 else (None, [])
+def head_rest(seq):
+    return (seq[0], seq[1:]) if len(seq) != 0 else (None, type(seq)())
 
 
-def flat(l):
-    return list(chain.from_iterable(l))
+def try_flat1(li):
+    return list(chain.from_iterable(li))
 
 
 def splits(l):
