@@ -8,3 +8,10 @@ jobs:
           . .venv/bin/activate
           sphinx-apidoc -f -o docs/source/piest src/piest
           make html -C docs
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          . .venv/bin/activate
+          pytest
