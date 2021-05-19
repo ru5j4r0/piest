@@ -1,11 +1,12 @@
 from itertools import chain
+from piest import type as ptype
 
 
 def head_rest(seq):
-    return (seq[0], seq[1:]) if len(seq) != 0 else (None, type(seq)())
+    return (seq[0], seq[1:]) if len(seq) != 0 else (None, ptype.defval(seq))
 
 
-def try_flat1(li):
+def flat1_chain(li):
     return list(chain.from_iterable(li))
 
 
@@ -14,7 +15,7 @@ def splits(l):
 
 
 def flat_splits(l):
-    return flat(splits(l))
+    return flat1_chain(splits(l))
 
 
 def divide(l, v):

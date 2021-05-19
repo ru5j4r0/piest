@@ -27,5 +27,5 @@ class TestList:
         ([[1], ('ab',), 'c'], [1, 'ab', 'c']),
         ([[1, 2], (3, 'ab'), 'cd'], [1, 2, 3, 'ab', 'c', 'd'])
     ])
-    def test_flat1(self, li, res):
-        assert plist.try_flat1(li) == res
+    def test_flat1_chain(self, li, res):
+        assert plist.flat1_chain(li) == res
