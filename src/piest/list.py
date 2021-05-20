@@ -1,9 +1,8 @@
 from itertools import chain
-from piest import type as ptype
 
 
-def head_rest(seq):
-    return (seq[0], seq[1:]) if len(seq) != 0 else (None, ptype.defval(seq))
+def head_rest(li):
+    return (li[0], li[1:]) if len(li) != 0 else (None, [])
 
 
 def flat1_chain(li):
