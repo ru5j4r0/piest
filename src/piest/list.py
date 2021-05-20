@@ -17,5 +17,5 @@ def flat_splits(li):
     return flat1_chain(splits(li))
 
 
-def divide(l, v):
-    return (l[:(i := l.index(v))], l[i+1:]) if v in l else (l, None)
+def divide(li, val):
+    return (li[:(i := li.index(val))], li[i+1:]) if val in li else (li, [])
