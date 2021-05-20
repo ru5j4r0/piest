@@ -13,8 +13,8 @@ def splits(li):
     return list(map(str.split, li))
 
 
-def flat_splits(l):
-    return flat1_chain(splits(l))
+def flat_splits(li):
+    return flat1_chain(splits(li))
 
 
 def divide(l, v):

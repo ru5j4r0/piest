@@ -27,3 +27,11 @@ class TestList:
     ])
     def test_splits(self, li, res):
         assert plist.splits(li) == res
+
+    @pytest.mark.parametrize('li, res', [
+        ([], []),
+        ([''], []),
+        (['abc', 'de fg'], ['abc', 'de', 'fg'])
+    ])
+    def test_flat_splits(self, li, res):
+        assert plist.flat_splits(li) == res
