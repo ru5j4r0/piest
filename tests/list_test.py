@@ -19,3 +19,11 @@ class TestList:
     ])
     def test_flat1_chain(self, li, res):
         assert plist.flat1_chain(li) == res
+
+    @pytest.mark.parametrize('li, res', [
+        ([], []),
+        ([''], [[]]),
+        (['abc', 'de fg'], [['abc'], ['de', 'fg']])
+    ])
+    def test_splits(self, li, res):
+        assert plist.splits(li) == res

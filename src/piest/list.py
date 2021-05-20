@@ -9,8 +9,8 @@ def flat1_chain(li):
     return list(chain.from_iterable(li))
 
 
-def splits(l):
-    return map(str.split, l)
+def splits(li):
+    return list(map(str.split, li))
 
 
 def flat_splits(l):
