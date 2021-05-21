@@ -1,3 +1,5 @@
-def value_type(d, k):
-    return ((v := d[k]), type(v)) if k in d else (None, type(None))
+import piest.type as ptype
 
+
+def value_type(dic, key):
+    return ((val := dic[key]), type(val)) if key in dic else (None, ptype.NONE)
