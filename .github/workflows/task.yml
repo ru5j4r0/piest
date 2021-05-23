@@ -6,9 +6,10 @@ jobs:
     steps:
       - run: |
           . .venv/bin/activate
-          flake8 src tests
           isort src tests
+          flake8 src tests
           bandit -r src
+          mypy src tests
   test:
     runs-on: ubuntu-latest
     steps:
