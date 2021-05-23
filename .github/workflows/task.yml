@@ -8,6 +8,7 @@ jobs:
           . .venv/bin/activate
           flake8 src tests
           isort src tests
+          bandit -r src
   test:
     runs-on: ubuntu-latest
     steps:
