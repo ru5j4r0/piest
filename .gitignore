@@ -1,7 +1,11 @@
 __pycache__/
 *.egg-info/
+
+/.idea/
 /.venv/
+
 /build/
 /dist/
-/.idea/
 /workflow/
+
+/sphinx/doctrees/
