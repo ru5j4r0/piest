@@ -16,10 +16,14 @@ jobs:
       - run: |
           . .venv/bin/activate
           pytest
-  docs:
+  doc:
     runs-on: ubuntu-latest
     steps:
       - run: |
           . .venv/bin/activate
-          sphinx-apidoc -f -o docs/source/piest src/piest
-          make html -C docs
+          rm -rf docs/*
+          sphinx-apidoc -f -o sphinx/source/piest src/piest
+          make dirhtml -C sphinx
+          cd docs
+          mv dirhtml/* .
+          rm -r dirhtml
