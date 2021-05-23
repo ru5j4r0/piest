@@ -9,7 +9,7 @@ jobs:
           isort src tests
           flake8 src tests
           bandit -r src
-          mypy src tests
+          mypy src
   test:
     runs-on: ubuntu-latest
     steps:
