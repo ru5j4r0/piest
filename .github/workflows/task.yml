@@ -1,6 +1,19 @@
 name: docs
 on: workflow_dispatch
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          . .venv/bin/activate
+          flake8 src tests
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          . .venv/bin/activate
+          pytest
   docs:
     runs-on: ubuntu-latest
     steps:
@@ -8,10 +21,3 @@ jobs:
           . .venv/bin/activate
           sphinx-apidoc -f -o docs/source/piest src/piest
           make html -C docs
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: |
-          . .venv/bin/activate
-          pytest
